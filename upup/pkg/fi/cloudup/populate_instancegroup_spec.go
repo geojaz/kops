@@ -32,7 +32,8 @@ import (
 
 // Default Machine types for various types of instance group machine
 const (
-	defaultNodeMachineTypeGCE     = "n1-standard-2"
+	// defaultNodeMachineTypeGCE     = "n1-standard-2" // $49/month if it's on for the whole month
+	defaultNodeMachineTypeGCE     = "e2-standard-2" // ~$49/month on normal price
 	defaultNodeMachineTypeVSphere = "vsphere_node"
 	defaultNodeMachineTypeDO      = "s-2vcpu-4gb"
 	defaultNodeMachineTypeALI     = "ecs.n2.medium"
@@ -41,7 +42,8 @@ const (
 	defaultBastionMachineTypeVSphere = "vsphere_bastion"
 	defaultBastionMachineTypeALI     = "ecs.n2.small"
 
-	defaultMasterMachineTypeGCE     = "n1-standard-1"
+	// defaultMasterMachineTypeGCE     = "n1-standard-1" // $24
+	defaultMasterMachineTypeGCE     = "e2-standard-2"
 	defaultMasterMachineTypeVSphere = "vsphere_master"
 	defaultMasterMachineTypeDO      = "s-2vcpu-2gb"
 	defaultMasterMachineTypeALI     = "ecs.n2.medium"

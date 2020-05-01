@@ -56,7 +56,7 @@ func SafeClusterName(clusterName string) string {
 
 // SafeObjectName returns the object name and cluster name escaped for GCE
 func SafeObjectName(name string, clusterName string) string {
-	gceName := name + "-" + clusterName
+	gceName := clusterName + "-" + name
 
 	// TODO: If the cluster name > some max size (32?) we should curtail it
 	return SafeClusterName(gceName)
